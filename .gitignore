@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# FastAPI generated files
+__pypackages__/
+
+# Local development configuration
+.env
+
+# IDE-specific files
+.idea/
+.vscode/
+
+# Compiled UI files
+static/
+templates/
+
+# Logs and runtime data
+*.log
+*.pid
+*.lock
+
+# Database
+db.sqlite3
+
+# Miscellaneous
+*.swp
+.DS_Store
