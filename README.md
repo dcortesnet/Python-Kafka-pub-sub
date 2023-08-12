@@ -8,8 +8,8 @@ The project consists of 2 services, one for publications and the other for consu
 
 | Service | Method | Endpoint | body | Description
 |:--------|:--------|:--------|:--------| :--------|
-|`Service pub` | POST |http://localhost:3000/messages | {message: "Hello world"} | Create new resource
-|`Service sub` | GET | http://localhost:3001/messages |  | Get all resources
+|`Service pub` | POST |http://localhost:8000/messages | {message: "Hello world"} | Create new resource
+|`Service sub` | GET | http://localhost:8001/messages |  | Get all resources
 
 ## Team
 

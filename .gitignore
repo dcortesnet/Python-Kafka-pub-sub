@@ -36,3 +36,9 @@ db.sqlite3
 # Miscellaneous
 *.swp
 .DS_Store
+
+# Envs
+server-sub/env-sub/
+server-pub/env-pub/
+
+
