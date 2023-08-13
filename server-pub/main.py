@@ -14,6 +14,10 @@ async def messages(request: Request):
     try:
         body = (await request.body()).decode('utf-8')
         data = json.loads(body)
+        
+        if "message" not in data:
+            raise HTTPException(status_code=400, detail="The message property is required")
+        
         message = {
             "id": str(uuid.uuid4()),
             "message": data['message'],
@@ -24,6 +28,8 @@ async def messages(request: Request):
         return { "detail": "Publishing an Event using Kafka successful" }
     except json.JSONDecodeError:
         raise HTTPException(status_code=400, detail="Invalid request body")
+    except HTTPException as http_exception:
+        raise http_exception
     except Exception as e:
         raise HTTPException(status_code=500, detail="Internal Server error")
     
