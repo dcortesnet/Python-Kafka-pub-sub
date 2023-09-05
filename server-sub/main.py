@@ -12,7 +12,7 @@ messages_storage = []
 def kafka_consumer_thread():
     consumer = KafkaConsumer(
         name_topic,
-        group_id='my-group',
+        group_id='my-group', # Grupo de consumidores
         bootstrap_servers="localhost:9092",
         value_deserializer=lambda x: json.loads(x.decode('utf-8'))
     )
